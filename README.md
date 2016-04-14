@@ -1,4 +1,4 @@
-# 5+ Pure css loading animation for ecommerce websites
+# 5+ Pure css loading animation for e-commerce websites
 
 ![screenshot](screenshot/pure-css-ecommerce-loading-animation.jpg)
 
