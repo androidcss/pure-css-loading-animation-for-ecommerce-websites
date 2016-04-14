@@ -1,0 +1,156 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<META NAME="ROBOTS" CONTENT="NOINDEX, FOLLOW">
+<title>Pure CSS e-commerce basket animation demo</title>
+<style type="text/css">
+
+body{
+	padding:0;
+	margin:0;
+}
+
+#basket-block{
+	position:relative;
+	width:200px;
+	margin:auto;
+	margin-top:100px;
+}
+
+#basket-body{
+	position:absolute;
+	border-top: 50px solid black;
+	border-left: 10px solid transparent;
+	border-right: 10px solid transparent;
+	height: 0;
+	width: 50px;
+	padding:20px;
+	top:0;
+	left:0;
+}
+
+#basket-body:before{
+	position:absolute;
+	content:"";
+	width:120px;
+	height:20px;
+	border-radius:10px;
+	background-color:#000;
+	top:-60px;
+	left:-15px;
+}
+
+#basket-body:after{
+	position:absolute;
+	content:"";
+	width:90px;
+	height:20px;
+	border-bottom-left-radius:10px;
+	border-bottom-right-radius:10px;
+	background-color:#000;
+	top:-10px;
+	left:0px;
+}
+
+#basket-handle{
+	position:absolute;
+	width: 0;
+	height: 0;
+	border-left: 25px solid transparent;
+	border-right: 25px solid transparent;
+	border-bottom: 50px solid #000;
+	top:-60px;
+	left:30px;
+}
+
+#basket-handle:after{
+	content:"";
+	position:absolute;
+	width: 0;
+	height: 0;
+	border-left: 15px solid transparent;
+	border-right: 15px solid transparent;
+	border-bottom: 30px solid #fff;
+	top:20px;
+	left:-15px;
+}
+
+#basket-handle:before{
+	content:"";
+	position:absolute;
+	width: 5px;
+	height: 5px;
+	border-radius:100%;
+	top:10px;
+	left:-2px;
+	background-color:#fff;
+}
+
+#basket-strip{
+	position:absolute;
+	width: 10px;
+	height: 35px;
+	background-color:#fff;
+	border-radius:10px;
+	top:10px;
+	left:25px;
+	transform-origin:bottom;
+	animation: scale 1s ease infinite;
+}
+
+#basket-strip:after{
+	content:"";
+	position:absolute;
+	width: 10px;
+	height: 35px;
+	background-color:#fff;
+	border-radius:10px;
+	left:25px;
+	transform-origin:top;
+	animation: scale 1s ease infinite;
+}
+
+#basket-strip:before{
+	content:"";
+	position:absolute;
+	width: 10px;
+	height: 35px;
+	background-color:#fff;
+	border-radius:10px;
+	left:50px;
+	transform-origin:bottom;
+	animation: scale 1s ease infinite;
+}
+
+@keyframes scale {
+ 0% {transform: scaleY(0);}
+ 50% {transform: scaleY(1);}
+ 100% {transform: scaleY(0);}
+}
+
+</style>
+</head>
+<body>
+<!-- Our Page Header -->
+<header style="width:100%;background-color:#333;">
+<div style="float:left;padding:15px;">
+<a href="http://androidcss.com" title="androidcss" rel="home" style="font-size:24px;text-decoration:none;color:#FFF;"><span style="color:#690">Android</span><span style="color:#CCC">CSS</span></a>
+</div>
+<div style="float:right;padding:15px;">
+<a href="http://androidcss.com/css/css-loading-animation-ecommerce/" style="color:#FFF;font-size:16px;">Tutorial</a>
+</div>
+<div style="clear:both;"></div>
+</header>
+<!-- Heading/Title -->
+<h2 style="margin:15px;text-align:center;font-size:30px;">Pure CSS e-commerce basket animation demo</h2>
+
+<!-- Actual Demo code starts here -->
+<div id="basket-block">
+  <div id="basket-body"> </div>
+  <div id="basket-handle"> </div>
+  <div id="basket-strip"> </div>
+</div>
+</body>
+</html>

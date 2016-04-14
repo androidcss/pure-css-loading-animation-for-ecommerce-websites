@@ -1,0 +1,144 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<META NAME="ROBOTS" CONTENT="NOINDEX, FOLLOW">
+<title>Pure CSS animated cart wheel loading animation demo</title>
+<style type="text/css">
+
+body{
+	padding:0;
+	margin:0;
+}
+
+#cart-block{
+	position:relative;
+	width:90px;
+	margin:auto;
+	margin-top:50px;
+}
+
+#cart-body{
+	border-top: 50px solid black;
+	border-left: 20px solid transparent;
+	border-right: 20px solid transparent;
+	height: 0;
+	width: 50px;
+}
+
+#cart-body:after{
+  content: "";
+  position:absolute;
+  border: 0 solid transparent;
+  border-top: 8px solid black;
+  border-left: 8px solid black;
+  width: 10px;
+  height: 20px;
+  top:-15px;
+  right:-12px;
+  transform: rotate(30deg);
+  border-radius:5px;
+}
+
+#cart-body:before{
+	position:absolute;
+	content:"";
+	border-top: 30px solid white;
+	border-left: 15px solid transparent;
+	border-right: 15px solid transparent;
+	height: 0;
+	width: 40px;
+	top:10px;
+	left:10px;
+}
+
+#cart-wheel1{
+	position:relative;
+	width:20px;
+	height:20px;
+	border-radius:100%;
+	border:3px solid #000;
+	background:rgba(0,0,0,0);
+	top:1px;
+	left:15px;
+	animation: rotation 0.5s linear infinite;
+}
+
+#cart-wheel1:after{
+	content:"";
+	position:absolute;
+	width:20px;
+	height:3px;
+	background-color:#000;
+	top:8px;
+}
+
+#cart-wheel1:before{
+	content:"";
+	position:absolute;
+	width:3px;
+	height:20px;
+	background-color:#000;
+	left:8px;
+}
+
+#cart-wheel2{
+	position:relative;
+	width:20px;
+	height:20px;
+	border-radius:100%;
+	border:3px solid #000;
+	background:rgba(0,0,0,0);
+	top:-25px;
+	left:45px;
+	animation: rotation 0.5s linear infinite;
+}
+
+#cart-wheel2:after{
+	content:"";
+	position:absolute;
+	width:20px;
+	height:3px;
+	background-color:#000;
+	top:8px;
+}
+
+#cart-wheel2:before{
+	content:"";
+	position:absolute;
+	width:3px;
+	height:20px;
+	background-color:#000;
+	left:8px;
+}
+
+@keyframes rotation {
+ from {transform: rotate(0deg);}
+ to {transform: rotate(360deg);}
+}
+
+</style>
+</head>
+<body>
+<!-- Our Page Header -->
+<header style="width:100%;background-color:#333;">
+<div style="float:left;padding:15px;">
+<a href="http://androidcss.com" title="androidcss" rel="home" style="font-size:24px;text-decoration:none;color:#FFF;"><span style="color:#690">Android</span><span style="color:#CCC">CSS</span></a>
+</div>
+<div style="float:right;padding:15px;">
+<a href="http://androidcss.com/css/css-loading-animation-ecommerce/" style="color:#FFF;font-size:16px;">Tutorial</a>
+</div>
+<div style="clear:both;"></div>
+</header>
+<!-- Heading/Title -->
+<h2 style="margin:15px;text-align:center;font-size:30px;">Pure CSS animated cart wheel loading animation demo</h2>
+
+<!-- Actual Demo code starts here -->
+<div id="cart-block">
+  <div id="cart-body"> </div>
+  <div id="cart-wheel1"> </div>
+  <div id="cart-wheel2"> </div>
+</div>
+</body>
+</html>

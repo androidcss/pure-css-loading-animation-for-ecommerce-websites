@@ -1,0 +1,48 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<META NAME="ROBOTS" CONTENT="NOINDEX, FOLLOW">
+<title>Pure CSS 3D basket rotation loading animation demo</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+<style type="text/css">
+body{
+	padding:0;
+	margin:0;
+}
+
+.icon-credit{
+	font-size:70px;
+	color:#000;
+	animation: scale 3s ease infinite;
+}
+
+@keyframes scale {
+ 0% {transform: rotateZ(0deg);transform: rotateY(0deg);}
+ 50% {transform: rotateZ(360deg);transform:rotateY(360deg);}
+ 100% {transform: rotateZ(0deg);transform:rotateY(0deg);}
+}
+
+</style>
+</head>
+<body>
+<!-- Our Page Header -->
+<header style="width:100%;background-color:#333;">
+<div style="float:left;padding:15px;">
+<a href="http://androidcss.com" title="androidcss" rel="home" style="font-size:24px;text-decoration:none;color:#FFF;"><span style="color:#690">Android</span><span style="color:#CCC">CSS</span></a>
+</div>
+<div style="float:right;padding:15px;">
+<a href="http://androidcss.com/css/css-loading-animation-ecommerce/" style="color:#FFF;font-size:16px;">Tutorial</a>
+</div>
+<div style="clear:both;"></div>
+</header>
+<!-- Heading/Title -->
+<h2 style="margin:15px;text-align:center;font-size:30px;">Pure CSS 3D basket rotation loading animation demo</h2>
+
+<!-- Actual Demo code starts here -->
+<div style="width:100px;margin:auto;margin-top:50px;">
+<div class="fa fa-shopping-basket fa-5x icon-credit"></div>
+</div>
+</body>
+</html>
